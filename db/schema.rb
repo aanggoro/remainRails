@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180323114931) do
+ActiveRecord::Schema.define(version: 20180325043228) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", primary_key: "sku", id: :string, force: :cascade do |t|
     t.datetime "created_at", null: false
