@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180414210745) do
+ActiveRecord::Schema.define(version: 20180514005025) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -25,7 +25,22 @@ ActiveRecord::Schema.define(version: 20180414210745) do
     t.index ["sku"], name: "sqlite_autoindex_products_1", unique: true
   end
 
-  create_table "recipes", force: :cascade do |t|
+  create_table "registrations", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "password"
+    t.string "phone_number"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "table_enums", force: :cascade do |t|
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

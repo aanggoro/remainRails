@@ -12,7 +12,9 @@ module RemainRails
     config.load_defaults 5.1
 
     #load library config
-    config.eager_load_paths << Rails.root.join("lib", "security")
+    #config.eager_load_paths << Rails.root.join('lib', 'security')
+    #alternative load library config
+    config.eager_load_paths << "#{Rails.root}/lib"
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
